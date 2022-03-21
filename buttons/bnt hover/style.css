@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+a{
+    text-decoration: none;
+    padding: 40px 80px;
+    color: rgba(0, 0, 0, 0.993);
+    font-size: 40px;
+    border: 4px solid rgba(0, 0, 0, 0.993);
+    transition: all 1s;
+    position: relative;
+    overflow: hidden;
+}
+a:before{
+    content: '';
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.993) ;
+    transform : translateX(-100%) ;
+    transition: all 1s;
+    z-index: -10;
+
+}
+a:hover:before{
+  transform: translateX(0);
+}
+a:hover{
+    color: white;
+}
