@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --b2color1:white;
+    --b2color2:blue;
+    --b2color3:rgb(187, 165, 40);
+}
+
+.button2 {
+    margin: 0%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button2 a {
+    text-transform: uppercase;
+    font-weight:bold;
+    text-decoration: none;
+    letter-spacing: 5px;
+    position: relative;
+    padding: 18px 30px;
+    background: transparent;
+    color: var(--b2color1);
+    z-index:1;
+}
+.button2 a::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: -1%;
+    top: -5px;
+    background-color: var(--b2color2);
+    transform: skewX(30deg);
+    z-index: -1;
+    transition: 0.25s;
+}
+
+.button2 a::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 51%;
+    top: 5px;
+    background-color: var(--b2color3);
+    transform: skewX(30deg);
+    z-index: -1;
+    transition: 0.25s;
+}
+
+.button2 a:hover::before {
+    transform: skewX(0deg);
+    left: 50%;
+    top: 0;
+    transition: 0.5s;
+}
+
+.button2 a:hover::after {
+    transform: skewX(0deg);
+    left: 0%;
+    top: 0;
+    transition: 0.5s;
+}
