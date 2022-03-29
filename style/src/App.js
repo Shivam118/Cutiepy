@@ -7,9 +7,9 @@ import './App.css';
 const App = () => {
   return (
     <div>
-      <Button2 />
-      <Button1 size="large" color1="white" color2="black" value="Button" Link="https://google.com/"/>
       <Button3 />
+      <Button2 />
+      <Button1 />
     </div>
   )
 }

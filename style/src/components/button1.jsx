@@ -10,10 +10,10 @@ const Button1 = (props) => {
   const [aBeforeOpacityBtn1, setABeforeOpacityBtn1] = useState('0');
 
   const styleButton1 = {
-    height: '100%',
     display: 'flex'
   }
   const styleButton1ASmall = {
+    margin:'10px',
     textDecoration: 'none',
     color: aColorBtn1,
     fontSize: '20px',
@@ -24,6 +24,7 @@ const Button1 = (props) => {
     overflow: 'hidden',
   }
   const styleButton1AMedium = {
+    margin:'15px',
     textDecoration: 'none',
     color: aColorBtn1,
     fontSize: '30px',
@@ -34,6 +35,7 @@ const Button1 = (props) => {
     overflow: 'hidden',
   }
   const styleButton1ALarge = {
+    margin:'20px',
     textDecoration: 'none',
     color: aColorBtn1,
     fontSize: '40px',
@@ -118,7 +120,7 @@ const Button1 = (props) => {
 
 Button1.defaultProps = {
   color1:"white",
-  color2:"red",
+  color2:"black",
   size:"medium",
   value:"Button",
   Link:"https://Google.com/",
