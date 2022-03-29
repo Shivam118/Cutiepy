@@ -15,11 +15,8 @@ const Button2 = (props) => {
 
 
   const styleButton2 = {
-    margin: '0%',
-    height: '100vh',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
+    height: '100%',
+    display: 'inline'
   }
 
   const styleButton2A = {
@@ -82,7 +79,7 @@ const Button2 = (props) => {
       style={styleButton2}
     >
       <a
-        href="#"
+        href=" "
         style={styleButton2A}
         onMouseEnter={MouseEnterBtn2}
         onMouseLeave={MouseLeaveBtn2}

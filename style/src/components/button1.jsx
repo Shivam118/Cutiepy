@@ -5,42 +5,48 @@ const Button1 = (props) => {
 
   const { color1, color2, value, size } = props;
 
-  const [fontSizeBtn1, setFontSizeBtn1] = useState('20px');
-  const [borderWidthBtn1, setBorderWidthBtn1] = useState('2px');
-  const [paddingBtn1, setPaddingBtn1] = useState('20px 40px');
+  // const [fontSizeBtn1, setFontSizeBtn1] = useState('20px');
+  // const [borderWidthBtn1, setBorderWidthBtn1] = useState('2px');
+  // const [paddingBtn1, setPaddingBtn1] = useState('20px 40px');
   const [aColorBtn1, setAColorBtn1] = useState(color2);
   const [aTransitionBtn1, setATransitionBtn1] = useState('1.75s');
   const [aBeforeTransformBtn1, setABeforeTransformBtn1] = useState('scale(5)');
   const [aBeforeTransitionBtn1, setABeforeTransitionBtn1] = useState('1s');
   const [aBeforeOpacityBtn1, setABeforeOpacityBtn1] = useState('0');
 
-  const Size = () => {
-    if (size == "small") {
-      setFontSizeBtn1('20px');
-      setPaddingBtn1('20px 40px');
-      setBorderWidthBtn1('2px');
-    }
-    if (size == "large") {
-      setFontSizeBtn1('40px');
-      setPaddingBtn1('40px 80px');
-      setBorderWidthBtn1('4px');
-    }
-  }
   const styleButton1 = {
-    height: '100vh',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
+    height: '100%',
+    display: 'flex'
   }
-  const styleButton1A = {
+  const styleButton1ASmall = {
     textDecoration: 'none',
     color: aColorBtn1,
-    fontSize: fontSizeBtn1,
-    border: borderWidthBtn1 + ' solid ' + color2,
-    padding: paddingBtn1,
+    fontSize: '20px',
+    border: '2px solid ' + color2,
+    padding: '20px 40px',
     transition: aTransitionBtn1,
     position: 'relative',
-    overflow: 'hidden'
+    overflow: 'hidden',
+  }
+  const styleButton1AMedium = {
+    textDecoration: 'none',
+    color: aColorBtn1,
+    fontSize: '30px',
+    border: '3px solid ' + color2,
+    padding: '30px 60px',
+    transition: aTransitionBtn1,
+    position: 'relative',
+    overflow: 'hidden',
+  }
+  const styleButton1ALarge = {
+    textDecoration: 'none',
+    color: aColorBtn1,
+    fontSize: '40px',
+    border: '4px solid ' + color2,
+    padding: '40px 80px',
+    transition: aTransitionBtn1,
+    position: 'relative',
+    overflow: 'hidden',
   }
   const styleButton1ABefore = {
     position: 'absolute',
@@ -76,15 +82,38 @@ const Button1 = (props) => {
     <div className="button1"
       style={styleButton1}
     >
-      <a
-        href="#"
-        style={styleButton1A}
-        onMouseEnter={MouseEnterBtn1}
-        onMouseLeave={MouseLeaveBtn1}
-      >
-        <div style={styleButton1ABefore}>{value}</div>
-        {value}
-      </a>
+      {
+        size === "small" ? (
+          <a href=" "
+            style={styleButton1ASmall}
+            onMouseEnter={MouseEnterBtn1}
+            onMouseLeave={MouseLeaveBtn1}
+          >
+            <span style={styleButton1ABefore}>{value}</span>
+            {value}
+          </a>
+        ) : (
+          size === "medium" ? (
+          <a href=" "
+            style={styleButton1AMedium}
+            onMouseEnter={MouseEnterBtn1}
+            onMouseLeave={MouseLeaveBtn1}
+          >
+            <span style={styleButton1ABefore}>{value}</span>
+            {value}
+          </a>
+        ) : (
+          <a href=" "
+            style={styleButton1ALarge}
+            onMouseEnter={MouseEnterBtn1}
+            onMouseLeave={MouseLeaveBtn1}
+          >
+            <span style={styleButton1ABefore}>{value}</span>
+            {value}
+          </a>
+        )
+        )
+      }
     </div>
   )
 }
