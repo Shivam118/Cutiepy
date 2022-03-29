@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-// import './css/button2.css';
-
 const Button2 = (props) => {
 
-  const { color1, color2, color3, value } = props;
+  const { color1, color2, color3, value, Link, Target } = props;
 
   const [aTransitionBtn2, setATransitionBtn2] = useState('0.25s');
   const [aTransformBtn2, setATransformBtn2] = useState('30deg');
@@ -79,7 +77,8 @@ const Button2 = (props) => {
       style={styleButton2}
     >
       <a
-        href=" "
+        href={Link}
+        target={Target}
         style={styleButton2A}
         onMouseEnter={MouseEnterBtn2}
         onMouseLeave={MouseLeaveBtn2}
@@ -91,5 +90,15 @@ const Button2 = (props) => {
     </div>
   )
 }
+
+Button2.defaultProps = {
+  color1:"white",
+  color2:"black",
+  color3:"red",
+  size:"medium",
+  value:"Button",
+  Link:"https://Google.com/",
+  Target:"_blank",
+};
 
 export default Button2;

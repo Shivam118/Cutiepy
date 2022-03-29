@@ -1,13 +1,8 @@
 import React, { useState } from 'react'
-// import './css/button1.css';
 
 const Button1 = (props) => {
 
-  const { color1, color2, value, size } = props;
-
-  // const [fontSizeBtn1, setFontSizeBtn1] = useState('20px');
-  // const [borderWidthBtn1, setBorderWidthBtn1] = useState('2px');
-  // const [paddingBtn1, setPaddingBtn1] = useState('20px 40px');
+  const { color1, color2, value, size, Link, Target } = props;
   const [aColorBtn1, setAColorBtn1] = useState(color2);
   const [aTransitionBtn1, setATransitionBtn1] = useState('1.75s');
   const [aBeforeTransformBtn1, setABeforeTransformBtn1] = useState('scale(5)');
@@ -84,7 +79,8 @@ const Button1 = (props) => {
     >
       {
         size === "small" ? (
-          <a href=" "
+          <a href={Link}
+            target={Target}
             style={styleButton1ASmall}
             onMouseEnter={MouseEnterBtn1}
             onMouseLeave={MouseLeaveBtn1}
@@ -94,7 +90,8 @@ const Button1 = (props) => {
           </a>
         ) : (
           size === "medium" ? (
-          <a href=" "
+          <a href={Link}
+            target={Target}
             style={styleButton1AMedium}
             onMouseEnter={MouseEnterBtn1}
             onMouseLeave={MouseLeaveBtn1}
@@ -103,7 +100,8 @@ const Button1 = (props) => {
             {value}
           </a>
         ) : (
-          <a href=" "
+          <a href={Link}
+            target={Target}
             style={styleButton1ALarge}
             onMouseEnter={MouseEnterBtn1}
             onMouseLeave={MouseLeaveBtn1}
@@ -117,5 +115,14 @@ const Button1 = (props) => {
     </div>
   )
 }
+
+Button1.defaultProps = {
+  color1:"white",
+  color2:"red",
+  size:"medium",
+  value:"Button",
+  Link:"https://Google.com/",
+  Target:"_blank",
+};
 
 export default Button1;
