@@ -6,8 +6,8 @@ import Button3 from './components/button3';
 const App = () => {
   return (
     <div>
-      <Button2 color1="white" color2="blue" color3="#bba528" value="Button"/>
-      <Button1 size="large" color1="white" color2="black" value="Button"/>
+      <Button2 color1="white" color2="blue" color3="#bba528" value="Button" Link="https://google.com/"/>
+      <Button1 size="large" color1="white" color2="black" value="Button" Link="https://google.com/"/>
       <Button3 />
     </div>
   )

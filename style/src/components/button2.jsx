@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+, Linkimport React, { useState } from 'react'
 // import './css/button2.css';
 
 const Button2 = (props) => {
 
-  const { color1, color2, color3, value } = props;
+  const { color1, color2, color3, value, Link } = props;
 
   const [aTransitionBtn2, setATransitionBtn2] = useState('0.25s');
   const [aTransformBtn2, setATransformBtn2] = useState('30deg');
@@ -82,7 +82,7 @@ const Button2 = (props) => {
       style={styleButton2}
     >
       <a
-        href="#"
+        href={Link}
         style={styleButton2A}
         onMouseEnter={MouseEnterBtn2}
         onMouseLeave={MouseLeaveBtn2}
