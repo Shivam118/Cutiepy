@@ -7,35 +7,6 @@ const Button3 = (props) => {
   const [aColorBtn3, setAColorBtn3] = useState(color2);
   const [aBeforeTransformBtn3, setABeforeTransformBtn3] = useState('translateX(-100%)');
 
-// .button3 a {
-    // text-decoration: none;
-    // padding: 40px 80px;
-    // color: var(--b3color1);
-    // font-size: 40px;
-    // border: 4px solid var(--b3color1);
-    // transition: all 1s;
-    // position: relative;
-    // overflow: hidden;
-// }
-// .button3 a:before {
-    // content: '';
-    // position: absolute;
-    // left: 0%;
-    // top: 0%;
-    // height: 100%;
-    // width: 100%;
-    // background-color: var(--b3color1);
-    // transform: translateX(-100%);
-    // transition: all 1s;
-    // z-index: -10;
-// }
-// .button3 a:hover:before {
-//     transform: translateX(0);
-// }
-// .button3 a:hover {
-//     color: var(--b3color2);
-// }
-
   const styleButton3 = {
     display: 'flex',
     flexWrap: 'wrap',
