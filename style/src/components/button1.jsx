@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 const Button1 = (props) => {
 
-  const { color1, color2, value, size, Link } = props;
+  const { color1, color2, value, size, Link, Target } = props;
 
   const [fontSizeBtn1, setFontSizeBtn1] = useState('20px');
   const [borderWidthBtn1, setBorderWidthBtn1] = useState('2px');
@@ -78,6 +78,7 @@ const Button1 = (props) => {
     >
       <a
         href={Link}
+        target={Target}
         style={styleButton1A}
         onMouseEnter={MouseEnterBtn1}
         onMouseLeave={MouseLeaveBtn1}
@@ -88,5 +89,14 @@ const Button1 = (props) => {
     </div>
   )
 }
+
+Button1.defaultProps = {
+  color1:"white",
+  color2:"red",
+  size:"medium",
+  value:"Button",
+  Link:"https://Google.com/",
+  Target:"_blank",
+};
 
 export default Button1;
