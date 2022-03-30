@@ -130,8 +130,8 @@ const Button4 = (props) => {
 }
 
 Button4.defaultProps = {
-  color1: defaultHelper.colorW,
-  color2: defaultHelper.colorB,
+  color1: defaultHelper.colorB,
+  color2: defaultHelper.colorW,
   size: defaultHelper.size,
   value: defaultHelper.value,
   Link: defaultHelper.Link,
