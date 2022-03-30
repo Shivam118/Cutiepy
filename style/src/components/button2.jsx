@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-// import './css/button2.css';
+import defaultHelper from '../defaultHelper';
 
 const Button2 = (props) => {
 
-  const { color1, color2, color3, value, Link, Target } = props;
+  const { color1, color2, color3, value, Link, Target, size } = props;
 
   const [aTransitionBtn2, setATransitionBtn2] = useState('0.25s');
   const [aTransformBtn2, setATransformBtn2] = useState('30deg');
@@ -16,16 +16,41 @@ const Button2 = (props) => {
 
   const styleButton2 = {
     display: 'flex',
-    margin: '20px',
+    flexWrap: 'wrap',
   }
 
-  const styleButton2A = {
+  const styleButton2ASmall = {
+    margin:'20px',
     textTransform: 'uppercase',
     fontWeight: 'bold',
     textDecoration: 'none',
     letterSpacing: '5px',
     position: 'relative',
     padding: '18px 30px',
+    background: 'transparent',
+    color: color1,
+    zIndex: '1',
+  }
+  const styleButton2AMedium = {
+    margin:'25px',
+    textTransform: 'uppercase',
+    fontWeight: 'bold',
+    textDecoration: 'none',
+    letterSpacing: '5px',
+    position: 'relative',
+    padding: '27px 45px',
+    background: 'transparent',
+    color: color1,
+    zIndex: '1',
+  }
+  const styleButton2ALarge = {
+    margin:'30px',
+    textTransform: 'uppercase',
+    fontWeight: 'bold',
+    textDecoration: 'none',
+    letterSpacing: '5px',
+    position: 'relative',
+    padding: '36px 60px',
     background: 'transparent',
     color: color1,
     zIndex: '1',
@@ -72,35 +97,64 @@ const Button2 = (props) => {
     setAAfterTopBtn2('5px');
 
   }
-
   return (
     <div
       className="button2"
       style={styleButton2}
     >
-      <a
-        href={Link}
-        target={Target}
-        style={styleButton2A}
-        onMouseEnter={MouseEnterBtn2}
-        onMouseLeave={MouseLeaveBtn2}
-      >
-        <div style={styleButton2ABefore} />
-        {value}
-        <div style={styleButton2AAfter} />
-      </a>
+      {
+        size === "small" ? (
+          <a
+            href={Link}
+            target={Target}
+            style={styleButton2ASmall}
+            onMouseEnter={MouseEnterBtn2}
+            onMouseLeave={MouseLeaveBtn2}
+          >
+            <div style={styleButton2ABefore} />
+            {value}
+            <div style={styleButton2AAfter} />
+          </a>
+        ) : (
+          size === "medium" ? (
+            <a
+              href={Link}
+              target={Target}
+              style={styleButton2AMedium}
+              onMouseEnter={MouseEnterBtn2}
+              onMouseLeave={MouseLeaveBtn2}
+            >
+              <div style={styleButton2ABefore} />
+              {value}
+              <div style={styleButton2AAfter} />
+            </a>
+          ) : (
+            <a
+              href={Link}
+              target={Target}
+              style={styleButton2ALarge}
+              onMouseEnter={MouseEnterBtn2}
+              onMouseLeave={MouseLeaveBtn2}
+            >
+              <div style={styleButton2ABefore} />
+              {value}
+              <div style={styleButton2AAfter} />
+            </a>
+          )
+        )
+      }
     </div>
   )
 }
 
 Button2.defaultProps = {
-  color1:"white",
-  color2:"black",
-  color3:"red",
-  size:"medium",
-  value:"Button",
-  Link:"https://Google.com/",
-  Target:"_blank",
+  color1: defaultHelper.colorW,
+  color2: defaultHelper.colorB,
+  color3: defaultHelper.colorR,
+  size: defaultHelper.size,
+  value: defaultHelper.value,
+  Link: defaultHelper.Link,
+  Target: defaultHelper.Target,
 };
 
 export default Button2;
