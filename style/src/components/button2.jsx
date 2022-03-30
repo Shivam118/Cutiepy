@@ -15,11 +15,8 @@ const Button2 = (props) => {
 
 
   const styleButton2 = {
-    margin: '0%',
-    height: '100vh',
     display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
+    margin: '20px',
   }
 
   const styleButton2A = {

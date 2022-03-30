@@ -14,23 +14,9 @@ const Button1 = (props) => {
   const [aBeforeTransitionBtn1, setABeforeTransitionBtn1] = useState('1s');
   const [aBeforeOpacityBtn1, setABeforeOpacityBtn1] = useState('0');
 
-  const Size = () => {
-    if (size == "small") {
-      setFontSizeBtn1('20px');
-      setPaddingBtn1('20px 40px');
-      setBorderWidthBtn1('2px');
-    }
-    if (size == "large") {
-      setFontSizeBtn1('40px');
-      setPaddingBtn1('40px 80px');
-      setBorderWidthBtn1('4px');
-    }
-  }
   const styleButton1 = {
-    height: '100vh',
     display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
+    margin: '20px',
   }
   const styleButton1A = {
     textDecoration: 'none',
