@@ -3,6 +3,7 @@ const defaultHelper = {
     colorB:"black",
     colorR:"red",
     colorP:"rgb(255, 0, 234)",
+    colorCyan:"#20caff",
     colorA:"rgb(aqua)",
     size:"medium",
     value:"Button",

@@ -14,7 +14,7 @@ const Button5 =(props) => {
     const styleButton5ASmall = {
         textDecoration:'none',
         padding:'15px 30px',
-        color:'aqua',
+        color:'acolorBtn5',
         fontSize:'18px',
         letterSpacing:'2px',
         border:'3px solid aqua',
