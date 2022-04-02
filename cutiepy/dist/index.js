@@ -521,7 +521,82 @@ const Button5 = ({
   Target,
   size
 }) => {
-  React.useState(color1);
+  const [aColorBtn5, setAColorBtn5] = React.useState(color1);
+  const styleButton5 = {
+    display: 'flex'
+  };
+  const styleButton5ASmall = {
+    textDecoration: 'none',
+    padding: '15px 30px',
+    color: aColorBtn5,
+    fontSize: '18px',
+    letterSpacing: '2px',
+    border: '3px solid aqua',
+    textTransform: 'uppercase',
+    position: 'relative'
+  };
+  const styleButton5AMedium = {
+    textDecoration: 'none',
+    padding: '15px 30px',
+    color: aColorBtn5,
+    fontSize: '18px',
+    letterSpacing: '2px',
+    border: '3px solid aqua',
+    textTransform: 'uppercase',
+    position: 'relative'
+  };
+  const styleButton5ALarge = {
+    textDecoration: 'none',
+    padding: '15px 30px',
+    color: aColorBtn5,
+    fontSize: '18px',
+    letterSpacing: '2px',
+    border: '3px solid aqua',
+    textTransform: 'uppercase',
+    position: 'relative'
+  };
+
+  const MouseEnterBtn5 = () => {
+    setAColorBtn5(color2);
+  };
+
+  const MouseLeaveBtn5 = () => {
+    setAColorBtn5(color1);
+  };
+
+  return /*#__PURE__*/React__default["default"].createElement("div", {
+    className: "button5",
+    style: styleButton5
+  }, size === "small" ? /*#__PURE__*/React__default["default"].createElement("a", {
+    href: Link,
+    target: Target,
+    style: styleButton5ASmall,
+    onMouseEnter: MouseEnterBtn5,
+    onMouseLeave: MouseLeaveBtn5
+  }, value) : size === "medium" ? /*#__PURE__*/React__default["default"].createElement("a", {
+    href: Link,
+    target: Target,
+    style: styleButton5AMedium,
+    onMouseEnter: MouseEnterBtn5,
+    onMouseLeave: MouseLeaveBtn5
+  }, value) : /*#__PURE__*/React__default["default"].createElement("a", {
+    href: Link,
+    target: Target,
+    style: styleButton5ALarge,
+    onMouseEnter: MouseEnterBtn5,
+    onMouseLeave: MouseLeaveBtn5
+  }, value));
+};
+
+Button5.defaultProps = {
+  color1: defaultHelper.colorB,
+  color2: defaultHelper.colorW,
+  color3: defaultHelper.colorP,
+  color4: defaultHelper.colorCyan,
+  size: defaultHelper.size,
+  value: defaultHelper.value,
+  Link: defaultHelper.Link,
+  Target: defaultHelper.Target
 };
 
 const Button6 = ({
@@ -718,9 +793,319 @@ Button6.defaultProps = {
   Target: defaultHelper.Target
 };
 
+const Button7 = ({
+  color1,
+  color2,
+  color3,
+  color4,
+  value,
+  Link,
+  Target,
+  size
+}) => {
+  const [aStyleColorBtn7, setAStyleColorBtn7] = React.useState(color2);
+  const [aStyleBeforeTopBtn7, setAStyleBeforeTopBtn7] = React.useState('-3px');
+  const [aStyleBeforeTransformBtn7, setAStyleBeforeTransformBtn7] = React.useState('');
+  const [aStyleBeforeLeftBtn7, setAStyleBeforeLeftBtn7] = React.useState('-3px');
+  const [aStyleAfterLeftBtn7, setAStyleAfterLeftBtn7] = React.useState('3px');
+  const [aStyleAfterTopBtn7, setAStyleAfterTopBtn7] = React.useState('3px');
+  const [aStyleAfterTransformBtn7, setAStyleAfterTransformBtn7] = React.useState('');
+  const styleButton7 = {
+    display: 'flex'
+  };
+  const styleButton7ASmall = {
+    margin: '10px',
+    width: '300px',
+    height: '60px',
+    textDecoration: 'none',
+    textTransform: 'uppercase',
+    textAlign: 'center',
+    lineHeight: '60px',
+    fontWeight: 'bold',
+    letterSpacing: '2px',
+    position: 'relative',
+    transition: 'all 0.2s',
+    color: aStyleColorBtn7
+  };
+  const styleButton7AMedium = {
+    margin: '15px',
+    width: '300px',
+    height: '60px',
+    textDecoration: 'none',
+    textTransform: 'uppercase',
+    textAlign: 'center',
+    lineHeight: '60px',
+    fontWeight: 'bold',
+    letterSpacing: '2px',
+    position: 'relative',
+    transition: 'all 0.2s',
+    color: aStyleColorBtn7
+  };
+  const styleButton7ALarge = {
+    margin: '20px',
+    width: '300px',
+    height: '60px',
+    textDecoration: 'none',
+    textTransform: 'uppercase',
+    textAlign: 'center',
+    lineHeight: '60px',
+    fontWeight: 'bold',
+    letterSpacing: '2px',
+    position: 'relative',
+    transition: 'all 0.2s',
+    color: aStyleColorBtn7
+  };
+  const styleButton7ABefore = {
+    position: 'absolute',
+    top: aStyleBeforeTopBtn7,
+    left: aStyleBeforeLeftBtn7,
+    width: '100%',
+    height: '100%',
+    backgroundColor: color4,
+    zIndex: '-1',
+    mixBlendMode: 'multiply',
+    transition: 'all 0.2s',
+    transformOrigin: 'top',
+    transform: aStyleBeforeTransformBtn7
+  };
+  const styleButton7AAfter = {
+    position: 'absolute',
+    top: aStyleAfterTopBtn7,
+    left: aStyleAfterLeftBtn7,
+    width: '100%',
+    height: '100%',
+    backgroundColor: color3,
+    zIndex: '-1',
+    mixBlendMode: 'multiply',
+    transition: 'all 0.2s',
+    transformOrigin: 'bottom',
+    transform: aStyleAfterTransformBtn7
+  };
+
+  const MouseEnterBtn7 = () => {
+    setAStyleColorBtn7(color1);
+    setAStyleBeforeTopBtn7('-6px');
+    setAStyleAfterTopBtn7('6px');
+    setAStyleBeforeLeftBtn7('0px');
+    setAStyleAfterLeftBtn7('0px');
+    setAStyleBeforeTransformBtn7('perspective(1000px) rotateX(75deg)');
+    setAStyleAfterTransformBtn7('perspective(1000px) rotateX(-75deg)');
+  };
+
+  const MouseLeaveBtn7 = () => {
+    setAStyleColorBtn7(color2);
+    setAStyleBeforeTopBtn7('-3px');
+    setAStyleAfterTopBtn7('3px');
+    setAStyleBeforeLeftBtn7('-3px');
+    setAStyleAfterLeftBtn7('3px');
+    setAStyleBeforeTransformBtn7('');
+    setAStyleAfterTransformBtn7('');
+  };
+
+  return /*#__PURE__*/React__default["default"].createElement("div", {
+    className: "button7",
+    style: styleButton7
+  }, size === "small" ? /*#__PURE__*/React__default["default"].createElement("a", {
+    href: Link,
+    target: Target,
+    style: styleButton7ASmall,
+    onMouseEnter: MouseEnterBtn7,
+    onMouseLeave: MouseLeaveBtn7
+  }, /*#__PURE__*/React__default["default"].createElement("div", {
+    style: styleButton7ABefore
+  }), value, /*#__PURE__*/React__default["default"].createElement("div", {
+    style: styleButton7AAfter
+  })) : size === "medium" ? /*#__PURE__*/React__default["default"].createElement("a", {
+    href: Link,
+    target: Target,
+    style: styleButton7AMedium,
+    onMouseEnter: MouseEnterBtn7,
+    onMouseLeave: MouseLeaveBtn7
+  }, /*#__PURE__*/React__default["default"].createElement("div", {
+    style: styleButton7ABefore
+  }), value, /*#__PURE__*/React__default["default"].createElement("div", {
+    style: styleButton7AAfter
+  })) : /*#__PURE__*/React__default["default"].createElement("a", {
+    href: Link,
+    target: Target,
+    style: styleButton7ALarge,
+    onMouseEnter: MouseEnterBtn7,
+    onMouseLeave: MouseLeaveBtn7
+  }, /*#__PURE__*/React__default["default"].createElement("div", {
+    style: styleButton7ABefore
+  }), value, /*#__PURE__*/React__default["default"].createElement("div", {
+    style: styleButton7AAfter
+  })));
+};
+
+Button7.defaultProps = {
+  color1: defaultHelper.colorB,
+  color2: defaultHelper.colorW,
+  color3: defaultHelper.colorP,
+  color4: defaultHelper.colorCyan,
+  size: defaultHelper.size,
+  value: defaultHelper.value,
+  Link: defaultHelper.Link,
+  Target: defaultHelper.Target
+};
+
+const Button8 = ({
+  color1,
+  color2,
+  value,
+  Link,
+  Target,
+  size
+}) => {
+  const [aStyleColorBtn8, setAStyleColorBtn8] = React.useState(color1);
+  const [aStyleBeforeOpacityBtn8, setAStyleBeforeOpacityBtn8] = React.useState('0');
+  const [aStyleBeforeTransformBtn8, setAStyleBeforeTransformBtn8] = React.useState('');
+  const [aStyleBeforeSpanFontSizeBtn8, setAStyleBeforeSpanFontSizeBtn8] = React.useState('25px');
+  const [aStyleBeforeSpanTransformBtn8, setAStyleBeforeSpanTransformBtn8] = React.useState('');
+  const styleButton8 = {
+    display: 'flex'
+  };
+  const styleButton8ASmall = {
+    margin: '10px',
+    textDecoration: 'none',
+    width: '160px',
+    height: '60px',
+    color: aStyleColorBtn8,
+    border: '2px solid ' + color1,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: '25px',
+    position: 'relative',
+    transition: 'all 0.2s',
+    textTransform: 'uppercase'
+  };
+  const styleButton8AMedium = {
+    textDecoration: 'none',
+    width: '160px',
+    height: '60px',
+    color: 'black',
+    border: '2px solid black',
+    textAlign: 'center',
+    lineHeight: '60px',
+    fontSize: '25px',
+    position: 'relative',
+    transition: 'all 0.2s'
+  };
+  const styleButton8ALarge = {
+    textDecoration: 'none',
+    width: '160px',
+    height: '60px',
+    color: 'black',
+    border: '2px solid black',
+    textAlign: 'center',
+    lineHeight: '60px',
+    fontSize: '25px',
+    position: 'relative',
+    transition: 'all 0.2s'
+  };
+  const styleButton8ABefore = {
+    position: 'absolute',
+    top: '0%',
+    left: '0%',
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'black',
+    zIndex: '-1',
+    opacity: aStyleBeforeOpacityBtn8,
+    transition: 'all 0.8s',
+    transform: aStyleBeforeTransformBtn8
+  };
+  const styleButton8ASpan = {
+    color: 'transparent',
+    position: 'relative'
+  };
+  const styleButton8ASpanBefore = {
+    position: 'absolute',
+    left: '0%',
+    top: '0%',
+    fontSize: aStyleBeforeSpanFontSizeBtn8,
+    color: aStyleColorBtn8,
+    transition: 'all 0.2s',
+    transform: aStyleBeforeSpanTransformBtn8
+  };
+
+  const MouseEnterBtn8 = () => {
+    setAStyleColorBtn8(color2);
+    setAStyleBeforeTransformBtn8('rotate(10deg)');
+    setAStyleBeforeOpacityBtn8('1');
+    setAStyleBeforeSpanFontSizeBtn8('60px');
+    setAStyleBeforeSpanTransformBtn8('translate(-65%, -40%) rotate(360deg)');
+  };
+
+  const MouseLeaveBtn8 = () => {
+    setAStyleColorBtn8(color1);
+    setAStyleBeforeTransformBtn8('');
+    setAStyleBeforeOpacityBtn8('0');
+    setAStyleBeforeSpanFontSizeBtn8('25px');
+    setAStyleBeforeSpanTransformBtn8('');
+  };
+
+  return /*#__PURE__*/React__default["default"].createElement("div", {
+    className: "button8",
+    style: styleButton8
+  }, size === "small" ? /*#__PURE__*/React__default["default"].createElement("a", {
+    href: Link,
+    target: Target,
+    style: styleButton8ASmall,
+    onMouseEnter: MouseEnterBtn8,
+    onMouseLeave: MouseLeaveBtn8
+  }, /*#__PURE__*/React__default["default"].createElement("span", {
+    style: styleButton8ASpan
+  }, "B", /*#__PURE__*/React__default["default"].createElement("span", {
+    style: styleButton8ASpanBefore
+  }, "B")), /*#__PURE__*/React__default["default"].createElement("span", {
+    style: styleButton8ABefore
+  }), value) : size === "medium" ? /*#__PURE__*/React__default["default"].createElement("a", {
+    href: Link,
+    target: Target,
+    style: styleButton8AMedium,
+    onMouseEnter: MouseEnterBtn8,
+    onMouseLeave: MouseLeaveBtn8
+  }, /*#__PURE__*/React__default["default"].createElement("span", {
+    style: styleButton8ASpan
+  }, /*#__PURE__*/React__default["default"].createElement("span", {
+    style: {
+      styleButton8ASpanBefore
+    }
+  }, "B")), /*#__PURE__*/React__default["default"].createElement("span", {
+    style: styleButton8ABefore
+  }), value) : /*#__PURE__*/React__default["default"].createElement("a", {
+    href: Link,
+    target: Target,
+    style: styleButton8ALarge,
+    onMouseEnter: MouseEnterBtn8,
+    onMouseLeave: MouseLeaveBtn8
+  }, /*#__PURE__*/React__default["default"].createElement("span", {
+    style: styleButton8ASpan
+  }, /*#__PURE__*/React__default["default"].createElement("span", {
+    style: {
+      styleButton8ASpanBefore
+    }
+  }, "B")), /*#__PURE__*/React__default["default"].createElement("span", {
+    style: styleButton8ABefore
+  }), value));
+};
+
+Button8.defaultProps = {
+  color1: defaultHelper.colorB,
+  color2: defaultHelper.colorW,
+  size: defaultHelper.size,
+  value: 'utton',
+  Link: defaultHelper.Link,
+  Target: defaultHelper.Target
+};
+
 exports.Button1 = Button1;
 exports.Button2 = Button2;
 exports.Button3 = Button3;
 exports.Button4 = Button4;
 exports.Button5 = Button5;
 exports.Button6 = Button6;
+exports.Button7 = Button7;
+exports.Button8 = Button8;

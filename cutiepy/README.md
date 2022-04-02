@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# CUTIEPY :blush:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Cutiepy** is a Javascript Library which provides you Animatable and Creative components. These components are designed using creative and Advanced Concepts of CSS (Cascading Style Sheet). 
+<div align="center">
 
-## Available Scripts
+</div>
 
-In the project directory, you can run:
+## Installation  
+Cutiepy is available as an [npm package](https://www.npmjs.com/package/cutiepy).
 
-### `npm start`
+```sh
+// with npm
+npm install cutiepy
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+//specific version
+npm install cutiepy@0.1.1
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
 
-### `npm test`
+Please note that, To get the latest stable release use `@latest` instead.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+Here is a quick example to get you started, **it's all you need**:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Button1, Button2, Button3 } from 'cutiepy'; //Specific for Button1, Button2, Button3 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+function App() {
+  return (
+    <Button1 color1="black" color2="white" value="Submit" Link="#" size="small" />
+    <Button2 color1="black" color2="blue" color3="red" value="Submit" Link="#" size="medium" />
+    <Button3 color1="yellow" color2="orange" value="Submit" Link="#" size="large" />
+  );
+}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+export default App();
+```
 
-### `npm run eject`
+Yes, it's really all you need to get started as you can see in this live and interactive demo:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This Library currently isn't available by default in ./node_modules . So first, you need to install the library using command given in Installation Section.
+Then, import it in your ```.js  or .jsx``` file,
