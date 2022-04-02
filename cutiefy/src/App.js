@@ -6,12 +6,14 @@ import Button4 from './Lib/Buttons/components/button4'
 import Button5 from './Lib/Buttons/components/button5'
 import Button6 from './Lib/Buttons/components/button6'
 import Button7 from './Lib/Buttons/components/button7'
+import Button8 from './Lib/Buttons/components/button8'
 import './App.css';
 
 const App = () => {
   return (
     <div>
-      <Button7 size="small"/>
+      <Button8 size="small" />
+      <Button7 size="small" />
       <Button6 />
       {/* <Button5 /> */}
       <Button4 />

@@ -1,9 +1,17 @@
 import React from 'react';
-import Button1 from './Buttons/components/button1'
-import Button2 from './Buttons/components/button2'
-import Button3 from './Buttons/components/button3'
-import Button4 from './Buttons/components/button4'
-import Button5 from './Buttons/components/button5'
-import Button6 from './Buttons/components/button6'
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-export { Button1, Button2, Button3, Button4, Button5, Button6 };
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
