@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import defaultHelper from '../../../../cutiefy/src/Lib/Buttons/defaultHelper';
-
+import defaultHelper from '../defaultHelper';
 const Button5 =(props) => {
     
     const { color1, color2, value, Link, Target, size } = props;
@@ -22,5 +21,10 @@ const Button5 =(props) => {
         textTransform:'uppercase',
         position:'relative',
     }
+    return(
+        <div className=''>
+            Button5
+        </div>
+    );
     }
 export default Button5;

@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import defaultHelper from '../defaultHelper';
 
-const Button1 = (props) => {
+const Button1 = ({ color1, color2, value, size, Link, Target }) => {
 
-  const { color1, color2, value, size, Link, Target } = props;
   const [aColorBtn1, setAColorBtn1] = useState(color2);
   const [aTransitionBtn1, setATransitionBtn1] = useState('1.75s');
   const [aBeforeTransformBtn1, setABeforeTransformBtn1] = useState('scale(5)');
