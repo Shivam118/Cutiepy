@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import defaultHelper from '../defaultHelper';
+import defaultHelper from '../../../../cutiefy/src/Lib/Buttons/defaultHelper';
 
 const Button5 =(props) => {
     
