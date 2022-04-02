@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import defaultHelper from '../defaultHelper';
 
-const Button3 = (props) => {
-
-  const { color1, color2, value, Link, Target, size } = props;
+const Button3 = ({ color1, color2, value, Link, Target, size }) => {
 
   const [aColorBtn3, setAColorBtn3] = useState(color2);
   const [aBeforeTransformBtn3, setABeforeTransformBtn3] = useState('translateX(-100%)');

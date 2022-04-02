@@ -2,9 +2,7 @@ import React, { useState } from 'react'
 import defaultHelper from '../defaultHelper';
 
 
-const Button6 = (props) => {
-
-    const { color1, color2, value, Link, Target, size } = props;
+const Button6 = ({ color1, color2, value, Link, Target, size } ) => {
 
     const [aColorBtn6, setAColorBtn6] = useState(color1);
     const [aTransitionDelayBtn6, setATransitionDelayBtn6] = useState('0s');

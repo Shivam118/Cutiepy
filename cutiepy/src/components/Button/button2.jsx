@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import defaultHelper from '../defaultHelper';
 
-const Button2 = (props) => {
-
-  const { color1, color2, color3, value, Link, Target, size } = props;
+const Button2 = ({ color1, color2, color3, value, Link, Target, size }) => {
 
   const [aTransitionBtn2, setATransitionBtn2] = useState('0.25s');
   const [aTransformBtn2, setATransformBtn2] = useState('30deg');

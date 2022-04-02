@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 import defaultHelper from '../defaultHelper';
 
-const Button8 = (props) => {
-
-    const { color1, color2, value, Link, Target, size } = props;
-
+const Button8 = ({ color1, color2, value, Link, Target, size }) => {
 
     const [aStyleColorBtn8, setAStyleColorBtn8] = useState(color1);
     const [aStyleBeforeOpacityBtn8, setAStyleBeforeOpacityBtn8] = useState('0');

@@ -2,9 +2,7 @@ import React, { useState } from 'react'
 import defaultHelper from '../defaultHelper';
 
 
-const Button7 = (props) => {
-
-    const { color1, color2, color3, color4, value, Link, Target, size } = props;
+const Button7 = ({ color1, color2, color3, color4, value, Link, Target, size }) => {
 
     const [aStyleColorBtn7, setAStyleColorBtn7] = useState(color2);
     const [aStyleBeforeTopBtn7, setAStyleBeforeTopBtn7] = useState('-3px');

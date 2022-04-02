@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import defaultHelper from '../defaultHelper';
-const Button4 = (props) => {
-
-  const { color1, color2, value, Link, Target, size } = props;
+const Button4 = ({ color1, color2, value, Link, Target, size }) => {
 
   const [aTransformBtn4, setATransformBtn4] = useState('');
   const [aBoxShadowBtn4, setABoxShadowBtn4] = useState('');

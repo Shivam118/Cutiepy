@@ -20,15 +20,14 @@ const defaultHelper = {
   Target: "_blank"
 };
 
-const Button1 = props => {
-  const {
-    color1,
-    color2,
-    value,
-    size,
-    Link,
-    Target
-  } = props;
+const Button1 = ({
+  color1,
+  color2,
+  value,
+  size,
+  Link,
+  Target
+}) => {
   const [aColorBtn1, setAColorBtn1] = React.useState(color2);
   const [aTransitionBtn1, setATransitionBtn1] = React.useState('1.75s');
   const [aBeforeTransformBtn1, setABeforeTransformBtn1] = React.useState('scale(5)');
@@ -142,16 +141,15 @@ Button1.defaultProps = {
   Target: defaultHelper.Target
 };
 
-const Button2 = props => {
-  const {
-    color1,
-    color2,
-    color3,
-    value,
-    Link,
-    Target,
-    size
-  } = props;
+const Button2 = ({
+  color1,
+  color2,
+  color3,
+  value,
+  Link,
+  Target,
+  size
+}) => {
   const [aTransitionBtn2, setATransitionBtn2] = React.useState('0.25s');
   const [aTransformBtn2, setATransformBtn2] = React.useState('30deg');
   const [aBeforeLeftBtn2, setABeforeLeftBtn2] = React.useState('-1%');
@@ -285,15 +283,14 @@ Button2.defaultProps = {
   Target: defaultHelper.Target
 };
 
-const Button3 = props => {
-  const {
-    color1,
-    color2,
-    value,
-    Link,
-    Target,
-    size
-  } = props;
+const Button3 = ({
+  color1,
+  color2,
+  value,
+  Link,
+  Target,
+  size
+}) => {
   const [aColorBtn3, setAColorBtn3] = React.useState(color2);
   const [aBeforeTransformBtn3, setABeforeTransformBtn3] = React.useState('translateX(-100%)');
   const styleButton3 = {
@@ -394,15 +391,14 @@ Button3.defaultProps = {
   Target: defaultHelper.Target
 };
 
-const Button4 = props => {
-  const {
-    color1,
-    color2,
-    value,
-    Link,
-    Target,
-    size
-  } = props;
+const Button4 = ({
+  color1,
+  color2,
+  value,
+  Link,
+  Target,
+  size
+}) => {
   const [aTransformBtn4, setATransformBtn4] = React.useState('');
   const [aBoxShadowBtn4, setABoxShadowBtn4] = React.useState('');
   const [aBeforeTransformBtn4, setABeforeTransformBtn4] = React.useState('');
@@ -517,28 +513,25 @@ Button4.defaultProps = {
   Target: defaultHelper.Target
 };
 
-const Button5 = props => {
-  const {
-    color1,
-    color2,
-    value,
-    Link,
-    Target,
-    size
-  } = props;
+const Button5 = ({
+  color1,
+  color2,
+  value,
+  Link,
+  Target,
+  size
+}) => {
   React.useState(color1);
-  return /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, "Button 5");
 };
 
-const Button6 = props => {
-  const {
-    color1,
-    color2,
-    value,
-    Link,
-    Target,
-    size
-  } = props;
+const Button6 = ({
+  color1,
+  color2,
+  value,
+  Link,
+  Target,
+  size
+}) => {
   const [aColorBtn6, setAColorBtn6] = React.useState(color1);
   const [aTransitionDelayBtn6, setATransitionDelayBtn6] = React.useState('0s');
   const [aBeforeLeftBtn6, setABeforeLeftBtn6] = React.useState('0%');

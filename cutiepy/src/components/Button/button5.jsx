@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
-import defaultHelper from '../../../../cutiefy/src/Lib/Buttons/defaultHelper';
 
-const Button5 =(props) => {
+const Button5 =({ color1, color2, value, Link, Target, size }) => {
     
-    const { color1, color2, value, Link, Target, size } = props;
-
     const [aColorBtn5, setAColorBtn5] = useState(color1);
     
     
