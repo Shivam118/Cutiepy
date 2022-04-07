@@ -11,47 +11,22 @@ const Button8 = ({ color1, color2, value, Link, Target, size }) => {
 
     const styleButton8 = {
         display: 'flex',
+        margin: (size / 10) + 'px',
     }
-
-    const styleButton8ASmall = {
-        margin:'10px',
-        textDecoration: 'none',
-        width: '160px',
-        height: '60px',
-        color: aStyleColorBtn8,
-        border: '2px solid ' + color1,
+    const styleButton8A = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: '25px',
+        fontSize: (size / 8) + 'px',
+        width: size + 'px',
+        height: (size / 3) + 'px',
+        border: (size / 95) + 'px solid ' + color1,
+        textDecoration: 'none',
+        color: aStyleColorBtn8,
         position: 'relative',
         transition: 'all 0.2s',
         textTransform: 'uppercase',
-    }
-
-    const styleButton8AMedium = {
-        textDecoration: 'none',
-        width: '160px',
-        height: '60px',
-        color: 'black',
-        border: '2px solid black',
-        textAlign: 'center',
-        lineHeight: '60px',
-        fontSize: '25px',
-        position: 'relative',
-        transition: 'all 0.2s',
-    }
-    const styleButton8ALarge = {
-        textDecoration: 'none',
-        width: '160px',
-        height: '60px',
-        color: 'black',
-        border: '2px solid black',
-        textAlign: 'center',
-        lineHeight: '60px',
-        fontSize: '25px',
-        position: 'relative',
-        transition: 'all 0.2s',
+        zIndex:'99',
     }
 
     const styleButton8ABefore = {
@@ -61,7 +36,7 @@ const Button8 = ({ color1, color2, value, Link, Target, size }) => {
         width: '100%',
         height: '100%',
         backgroundColor: 'black',
-        zIndex: '-1',
+        zIndex: '95',
         opacity: aStyleBeforeOpacityBtn8,
         transition: 'all 0.8s',
         transform: aStyleBeforeTransformBtn8,
@@ -73,12 +48,13 @@ const Button8 = ({ color1, color2, value, Link, Target, size }) => {
     }
     const styleButton8ASpanBefore = {
         position: 'absolute',
-        left:'0%',
-        top:'0%',
+        left: '0%',
+        top: '0%',
         fontSize: aStyleBeforeSpanFontSizeBtn8,
         color: aStyleColorBtn8,
         transition: 'all 0.2s',
         transform: aStyleBeforeSpanTransformBtn8,
+        zIndex:'99',
     }
 
     const MouseEnterBtn8 = () => {
@@ -102,54 +78,19 @@ const Button8 = ({ color1, color2, value, Link, Target, size }) => {
             className="button8"
             style={styleButton8}
         >
-            {
-                size === "small" ? (
             <a
                 href={Link}
                 target={Target}
-                style={styleButton8ASmall}
+                style={styleButton8A}
                 onMouseEnter={MouseEnterBtn8}
                 onMouseLeave={MouseLeaveBtn8}
             >
                 <span style={styleButton8ASpan}>
-                    B
-                <span style={styleButton8ASpanBefore}>B</span>
+                    <span style={{ styleButton8ASpanBefore }}>B</span>
                 </span>
                 <span style={styleButton8ABefore} />
                 {value}
             </a>
-            ) : (
-                    size === "medium" ? (
-                        <a
-                            href={Link}
-                            target={Target}
-                            style={styleButton8AMedium}
-                            onMouseEnter={MouseEnterBtn8}
-                            onMouseLeave={MouseLeaveBtn8}
-                        >
-                            <span style={styleButton8ASpan}>
-                                <span style={{ styleButton8ASpanBefore }}>B</span>
-                            </span>
-                            <span style={styleButton8ABefore} />
-                            {value}
-                        </a>
-                    ) : (
-                        <a
-                            href={Link}
-                            target={Target}
-                            style={styleButton8ALarge}
-                            onMouseEnter={MouseEnterBtn8}
-                            onMouseLeave={MouseLeaveBtn8}
-                        >
-                            <span style={styleButton8ASpan}>
-                                <span style={{ styleButton8ASpanBefore }}>B</span>
-                            </span>
-                            <span style={styleButton8ABefore} />
-                            {value}
-                        </a>
-                    )
-                )
-            }
         </div>
     )
 }

@@ -8,35 +8,19 @@ const Button5 = ({ color1, color2, value, Link, Target, size }) => {
 
     const styleButton5 = {
         display: 'flex',
+        margin: (size / 10) + 'px',
     }
-
-    const styleButton5ASmall = {
+    const styleButton5A = {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: (size / 8) + 'px',
+        width: size + 'px',
+        height: (size / 3) + 'px',
+        border: (size / 95) + 'px solid ' + color2,
         textDecoration: 'none',
-        padding: '15px 30px',
         color: aColorBtn5,
-        fontSize: '18px',
         letterSpacing: '2px',
-        border: '3px solid aqua',
-        textTransform: 'uppercase',
-        position: 'relative',
-    }
-    const styleButton5AMedium= {
-        textDecoration: 'none',
-        padding: '15px 30px',
-        color: aColorBtn5,
-        fontSize: '18px',
-        letterSpacing: '2px',
-        border: '3px solid aqua',
-        textTransform: 'uppercase',
-        position: 'relative',
-    }
-    const styleButton5ALarge = {
-        textDecoration: 'none',
-        padding: '15px 30px',
-        color: aColorBtn5,
-        fontSize: '18px',
-        letterSpacing: '2px',
-        border: '3px solid aqua',
         textTransform: 'uppercase',
         position: 'relative',
     }
@@ -52,41 +36,15 @@ const Button5 = ({ color1, color2, value, Link, Target, size }) => {
             className="button5"
             style={styleButton5}
         >
-            {
-                size === "small" ? (
-                    <a
-                        href={Link}
-                        target={Target}
-                        style={styleButton5ASmall}
-                        onMouseEnter={MouseEnterBtn5}
-                        onMouseLeave={MouseLeaveBtn5}
-                    >
-                        {value}
-                    </a>
-                ) : (
-                    size === "medium" ? (
-                        <a
-                            href={Link}
-                            target={Target}
-                            style={styleButton5AMedium}
-                            onMouseEnter={MouseEnterBtn5}
-                            onMouseLeave={MouseLeaveBtn5}
-                        >
-                            {value}
-                        </a>
-                    ) : (
-                        <a
-                            href={Link}
-                            target={Target}
-                            style={styleButton5ALarge}
-                            onMouseEnter={MouseEnterBtn5}
-                            onMouseLeave={MouseLeaveBtn5}
-                        >
-                            {value}
-                        </a>
-                    )
-                )
-            }
+            <a
+                href={Link}
+                target={Target}
+                style={styleButton5A}
+                onMouseEnter={MouseEnterBtn5}
+                onMouseLeave={MouseLeaveBtn5}
+            >
+                {value}
+            </a>
         </div>
     );
 }
@@ -94,8 +52,6 @@ const Button5 = ({ color1, color2, value, Link, Target, size }) => {
 Button5.defaultProps = {
     color1: defaultHelper.colorB,
     color2: defaultHelper.colorW,
-    color3: defaultHelper.colorP,
-    color4: defaultHelper.colorCyan,
     size: defaultHelper.size,
     value: defaultHelper.value,
     Link: defaultHelper.Link,

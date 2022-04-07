@@ -10,37 +10,20 @@ const Button1 = ({ color1, color2, value, size, Link, Target }) => {
   const [aBeforeOpacityBtn1, setABeforeOpacityBtn1] = useState('0');
 
   const styleButton1 = {
-    display: 'flex'
-  }
-  const styleButton1ASmall = {
-    margin: '10px',
-    textDecoration: 'none',
-    color: aColorBtn1,
-    fontSize: '20px',
-    border: '2px solid ' + color2,
-    padding: '20px 40px',
-    transition: aTransitionBtn1,
+    display: 'flex',
     position: 'relative',
-    overflow: 'hidden',
+    margin: (size / 10) + 'px',
   }
-  const styleButton1AMedium = {
-    margin: '15px',
+  const styleButton1A = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     textDecoration: 'none',
     color: aColorBtn1,
-    fontSize: '30px',
-    border: '3px solid ' + color2,
-    padding: '30px 60px',
-    transition: aTransitionBtn1,
-    position: 'relative',
-    overflow: 'hidden',
-  }
-  const styleButton1ALarge = {
-    margin: '20px',
-    textDecoration: 'none',
-    color: aColorBtn1,
-    fontSize: '40px',
-    border: '4px solid ' + color2,
-    padding: '40px 80px',
+    fontSize: (size / 6) + 'px',
+    border: (size / 95) + 'px solid ' + color2,
+    width: size + 'px',
+    height: (size / 3) + 'px',
     transition: aTransitionBtn1,
     position: 'relative',
     overflow: 'hidden',
@@ -79,41 +62,15 @@ const Button1 = ({ color1, color2, value, size, Link, Target }) => {
     <div className="button1"
       style={styleButton1}
     >
-      {
-        size === "small" ? (
-          <a href={Link}
-            target={Target}
-            style={styleButton1ASmall}
-            onMouseEnter={MouseEnterBtn1}
-            onMouseLeave={MouseLeaveBtn1}
-          >
-            <span style={styleButton1ABefore}>{value}</span>
-            {value}
-          </a>
-        ) : (
-          size === "medium" ? (
-            <a href={Link}
-              target={Target}
-              style={styleButton1AMedium}
-              onMouseEnter={MouseEnterBtn1}
-              onMouseLeave={MouseLeaveBtn1}
-            >
-              <span style={styleButton1ABefore}>{value}</span>
-              {value}
-            </a>
-          ) : (
-            <a href={Link}
-              target={Target}
-              style={styleButton1ALarge}
-              onMouseEnter={MouseEnterBtn1}
-              onMouseLeave={MouseLeaveBtn1}
-            >
-              <span style={styleButton1ABefore}>{value}</span>
-              {value}
-            </a>
-          )
-        )
-      }
+      <a href={Link}
+        target={Target}
+        style={styleButton1A}
+        onMouseEnter={MouseEnterBtn1}
+        onMouseLeave={MouseLeaveBtn1}
+      >
+        <span style={styleButton1ABefore}>{value}</span>
+        {value}
+      </a>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import defaultHelper from '../defaultHelper';
 
 
-const Button6 = ({ color1, color2, value, Link, Target, size } ) => {
+const Button6 = ({ color1, color2, value, Link, Target, size }) => {
 
     const [aColorBtn6, setAColorBtn6] = useState(color1);
     const [aTransitionDelayBtn6, setATransitionDelayBtn6] = useState('0s');
@@ -16,77 +16,43 @@ const Button6 = ({ color1, color2, value, Link, Target, size } ) => {
     const [aAfterRightBtn6, setAAfterRightBtn6] = useState('0%');
     const [aAfterBoxShadowBtn6, setAAfterBoxShadowBtn6] = useState('100px 0 0 ' + color1);
     const [aAfterTransformBtn6, setAAfterTransformBtn6] = useState('translateY(-50%)');
-    
+
     const [aSpanTransitionDelayBtn6, setASpanTransitionDelayBtn6] = useState('0s');
     const [aSpanTransformBtn6, setASpanTransformBtn6] = useState('scale(0)');
 
 
     const styleButton6 = {
         display: 'flex',
+        margin: (size / 10) + 'px',
+        zIndex: '100',
     }
-
-    const styleButton6ASmall = {
-        margin:'10px',
-        width: '170px',
-        height: '60px',
-        color: aColorBtn6,
-        backgroundColor: 'transparent',
-        fontSize: '20px',
-        textDecoration: 'none',
-        textTransform: 'uppercase',
-        textAlign: 'center',
-        display:'flex',
+    const styleButton6A = {
+        display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        transition: 'all 0.5s',
-        position: 'relative',
-        transitionDelay: aTransitionDelayBtn6,
-    }
-    const styleButton6AMedium = {
-        margin:'10px',
-        width: '220px',
-        height: '80px',
+        fontSize: (size / 8) + 'px',
+        width: size + 'px',
+        height: (size / 3) + 'px',
         color: aColorBtn6,
         backgroundColor: 'transparent',
-        fontSize: '26px',
         textDecoration: 'none',
         textTransform: 'uppercase',
         textAlign: 'center',
-        display:'flex',
-        justifyContent: 'center',
-        alignItems:'center',
         transition: 'all 0.5s',
         position: 'relative',
         transitionDelay: aTransitionDelayBtn6,
+        zIndex: '100',
     }
-    const styleButton6ALarge = {
-        margin:'20px',
-        width: '280px',
-        height: '110px',
-        color: aColorBtn6,
-        backgroundColor: 'transparent',
-        fontSize: '32px',
-        textDecoration: 'none',
-        textTransform: 'uppercase',
-        textAlign: 'center',
-        display:'flex',
-        justifyContent: 'center',
-        alignItems:'center',
-        transition: 'all 0.5s',
-        position: 'relative',
-        transitionDelay: aTransitionDelayBtn6,
-    }
-
     const styleButton6ABefore = {
         position: 'absolute',
         top: '50%',
-        height: '20px',
-        width: '20px',
+        height: (size / 10) + 'px',
+        width: (size / 10) + 'px',
         borderRadius: '50%',
         backgroundColor: color1,
         transform: aBeforeTransformBtn6,
         transition: 'all 0.3s',
-        zIndex: '-1',
+        zIndex: '99',
         opacity: aOpacityBtn6,
         left: aBeforeLeftBtn6,
         boxShadow: aBeforeBoxShadowBtn6,
@@ -94,13 +60,13 @@ const Button6 = ({ color1, color2, value, Link, Target, size } ) => {
     const styleButton6AAfter = {
         position: 'absolute',
         top: '50%',
-        height: '20px',
-        width: '20px',
+        height: (size / 10) + 'px',
+        width: (size / 10) + 'px',
         borderRadius: '50%',
         backgroundColor: color1,
         transform: aAfterTransformBtn6,
         transition: 'all 0.3s',
-        zIndex: '-1',
+        zIndex: '99',
         opacity: aOpacityBtn6,
         right: aAfterRightBtn6,
         boxShadow: aAfterBoxShadowBtn6,
@@ -116,7 +82,7 @@ const Button6 = ({ color1, color2, value, Link, Target, size } ) => {
         borderRadius: '8px',
         transform: aSpanTransformBtn6,
         transition: 'all 0.3s',
-        zIndex: '-1',
+        zIndex: '99',
         transitionDelay: aSpanTransitionDelayBtn6,
     }
 
@@ -159,51 +125,18 @@ const Button6 = ({ color1, color2, value, Link, Target, size } ) => {
         <div
             className="button6"
             style={styleButton6}
+        >            <a
+            href={Link}
+            target={Target}
+            style={styleButton6A}
+            onMouseEnter={MouseEnterBtn6}
+            onMouseLeave={MouseLeaveBtn6}
         >
-            {
-                size === "small" ? (
-                    <a
-                        href={Link}
-                        target={Target}
-                        style={styleButton6ASmall}
-                        onMouseEnter={MouseEnterBtn6}
-                        onMouseLeave={MouseLeaveBtn6}
-                    >
-                        <span style={styleButton6Span} />
-                        <div style={styleButton6ABefore} />
-                        {value}
-                        <div style={styleButton6AAfter} />
-                    </a>
-                ) : (
-                    size === "medium" ? (
-                        <a
-                            href={Link}
-                            target={Target}
-                            style={styleButton6AMedium}
-                            onMouseEnter={MouseEnterBtn6}
-                            onMouseLeave={MouseLeaveBtn6}
-                        >
-                            <span style={styleButton6Span} />
-                            <div style={styleButton6ABefore} />
-                            {value}
-                            <div style={styleButton6AAfter} />
-                        </a>
-                    ) : (
-                        <a
-                            href={Link}
-                            target={Target}
-                            style={styleButton6ALarge}
-                            onMouseEnter={MouseEnterBtn6}
-                            onMouseLeave={MouseLeaveBtn6}
-                        >
-                            <span style={styleButton6Span} />
-                            <div style={styleButton6ABefore} />
-                            {value}
-                            <div style={styleButton6AAfter} />
-                        </a>
-                    )
-                )
-            }
+                <span style={styleButton6Span} />
+                <div style={styleButton6ABefore} />
+                {value}
+                <div style={styleButton6AAfter} />
+            </a>
         </div>
     )
 }

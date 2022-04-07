@@ -8,44 +8,25 @@ const Button3 = ({ color1, color2, value, Link, Target, size }) => {
 
   const styleButton3 = {
     display: 'flex',
-    flexWrap: 'wrap',
+    margin: (size / 10) + 'px',
   }
-
-  const styleButton3ASmall = {
-    margin:'10px',
+  const styleButton3A = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: (size / 8) + 'px',
+    width: size + 'px',
+    height: (size / 3) + 'px',
+    border: (size / 95) + 'px solid ' + color2,
     textDecoration: 'none',
-    padding: '20px 40px',
     color: aColorBtn3,
-    fontSize: '20px',
-    border: '2px solid ' + color2,
     transition: 'all 1s',
     position: 'relative',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    zIndex: '99',
   }
-  const styleButton3AMedium = {
-    margin:'10px',
-    textDecoration: 'none',
-    padding: '30px 60px',
-    color: aColorBtn3,
-    fontSize: '30px',
-    border: '3px solid ' + color2,
-    transition: 'all 1s',
-    position: 'relative',
-    overflow: 'hidden'
-  }
-  const styleButton3ALarge = {
-    margin:'10px',
-    textDecoration: 'none',
-    padding: '40px 80px',
-    color: aColorBtn3,
-    fontSize: '40px',
-    border: '4px solid ' + color2,
-    transition: 'all 1s',
-    position: 'relative',
-    overflow: 'hidden'
-  }
-
   const styleButton3ABefore = {
+    display: 'flex',
     position: 'absolute',
     left: '0%',
     top: '0%',
@@ -54,7 +35,7 @@ const Button3 = ({ color1, color2, value, Link, Target, size }) => {
     backgroundColor: color2,
     transform: aBeforeTransformBtn3,
     transition: 'all 1s',
-    zIndex: '-10',
+    zIndex: '98',
   }
 
   const MouseEnterBtn3 = () => {
@@ -70,44 +51,16 @@ const Button3 = ({ color1, color2, value, Link, Target, size }) => {
       className="button3"
       style={styleButton3}
     >
-      {
-        size === "small" ? (
-          <a
-            href={Link}
-            target={Target}
-            style={styleButton3ASmall}
-            onMouseEnter={MouseEnterBtn3}
-            onMouseLeave={MouseLeaveBtn3}
-          >
-            <div style={styleButton3ABefore} />
-            {value}
-          </a>
-        ) : (
-          size === "medium" ? (
-            <a
-              href={Link}
-              target={Target}
-              style={styleButton3AMedium}
-              onMouseEnter={MouseEnterBtn3}
-              onMouseLeave={MouseLeaveBtn3}
-            >
-              <div style={styleButton3ABefore} />
-              {value}
-            </a>
-          ) : (
-            <a
-              href={Link}
-              target={Target}
-              style={styleButton3ALarge}
-              onMouseEnter={MouseEnterBtn3}
-              onMouseLeave={MouseLeaveBtn3}
-            >
-              <div style={styleButton3ABefore} />
-              {value}
-            </a>
-          )
-        )
-      }
+      <a
+        href={Link}
+        target={Target}
+        style={styleButton3A}
+        onMouseEnter={MouseEnterBtn3}
+        onMouseLeave={MouseLeaveBtn3}
+      >
+        <div style={styleButton3ABefore} />
+        {value}
+      </a>
     </div>
   )
 }

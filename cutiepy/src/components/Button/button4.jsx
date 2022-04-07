@@ -10,49 +10,26 @@ const Button4 = ({ color1, color2, value, Link, Target, size }) => {
 
   const styleButton4 = {
     display: 'flex',
-    flexWrap: 'wrap',
+    margin: (size / 10) + 'px',
+  }
+  const styleButton4A = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: (size / 8) + 'px',
+    width: size + 'px',
+    height: (size / 3) + 'px',
+    border: (size / 95) + 'px solid ' + color1,
+    position: 'relative',
+    textDecoration: 'none',
+    backgroundColor: color1,
+    color: color2,
+    borderRadius: '100px',
+    transition: 'all 0.2s',
+    transform: aTransformBtn4,
+    boxShadow: aBoxShadowBtn4,
   }
 
-  const styleButton4ASmall = {
-    margin:'10px',
-    position: 'relative',
-    textDecoration: 'none',
-    padding: '25px 50px',
-    backgroundColor: color1,
-    color: color2,
-    borderRadius: '100px',
-    fontSize: '24px',
-    transition: 'all 0.2s',
-    transform: aTransformBtn4,
-    boxShadow: aBoxShadowBtn4,
-  }
-  const styleButton4AMedium = {
-    margin:'15px',
-    position: 'relative',
-    textDecoration: 'none',
-    padding: '37.5px 75px',
-    backgroundColor: color1,
-    color: color2,
-    borderRadius: '100px',
-    fontSize: '36px',
-    transition: 'all 0.2s',
-    transform: aTransformBtn4,
-    boxShadow: aBoxShadowBtn4,
-  }
-  const styleButton4ALarge = {
-    margin:'20px',
-    position: 'relative',
-    textDecoration: 'none',
-    padding: '50px 100px',
-    backgroundColor: color1,
-    color: color2,
-    borderRadius: '100px',
-    fontSize: '48px',
-    transition: 'all 0.2s',
-    transform: aTransformBtn4,
-    boxShadow: aBoxShadowBtn4,
-  }
-  
   const styleButton4ABefore = {
     position: 'absolute',
     top: '0%',
@@ -85,44 +62,16 @@ const Button4 = ({ color1, color2, value, Link, Target, size }) => {
       className="button4"
       style={styleButton4}
     >
-      {
-        size === "small" ? (
-          <a
-            href={Link}
-            target={Target}
-            style={styleButton4ASmall}
-            onMouseEnter={MouseEnterBtn4}
-            onMouseLeave={MouseLeaveBtn4}
-          >
-            <div style={styleButton4ABefore} />
-            {value}
-          </a>
-        ) : (
-          size === "medium" ? (
-            <a
-              href={Link}
-              target={Target}
-              style={styleButton4AMedium}
-              onMouseEnter={MouseEnterBtn4}
-              onMouseLeave={MouseLeaveBtn4}
-            >
-              <div style={styleButton4ABefore} />
-              {value}
-            </a>
-          ) : (
-            <a
-              href={Link}
-              target={Target}
-              style={styleButton4ALarge}
-              onMouseEnter={MouseEnterBtn4}
-              onMouseLeave={MouseLeaveBtn4}
-            >
-              <div style={styleButton4ABefore} />
-              {value}
-            </a>
-          )
-        )
-      }
+      <a
+        href={Link}
+        target={Target}
+        style={styleButton4A}
+        onMouseEnter={MouseEnterBtn4}
+        onMouseLeave={MouseLeaveBtn4}
+      >
+        <div style={styleButton4ABefore} />
+        {value}
+      </a>
     </div>
   )
 }

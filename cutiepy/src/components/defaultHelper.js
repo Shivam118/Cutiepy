@@ -4,7 +4,7 @@ const defaultHelper = {
     colorR:"red",
     colorP:"rgb(255, 0, 234)",
     colorA:"rgb(aqua)",
-    size:"medium",
+    size:"300",
     value:"Button",
     Link:"https://Google.com/",
     Target:"_blank",

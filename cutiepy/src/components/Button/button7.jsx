@@ -15,51 +15,25 @@ const Button7 = ({ color1, color2, color3, color4, value, Link, Target, size }) 
 
     const styleButton7 = {
         display: 'flex',
+        margin: (size / 10) + 'px',
     }
-
-    const styleButton7ASmall = {
-        margin:'10px',
-        width: '300px',
-        height: '60px',
+    const styleButton7A = {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: (size / 8) + 'px',
+        width: size + 'px',
+        height: (size / 3) + 'px',
         textDecoration: 'none',
         textTransform: 'uppercase',
-        textAlign: 'center',
         lineHeight: '60px',
         fontWeight: 'bold',
         letterSpacing: '2px',
         position: 'relative',
         transition: 'all 0.2s',
         color: aStyleColorBtn7,
+        zIndex: '100',
     }
-    const styleButton7AMedium = {
-        margin:'15px',
-        width: '300px',
-        height: '60px',
-        textDecoration: 'none',
-        textTransform: 'uppercase',
-        textAlign: 'center',
-        lineHeight: '60px',
-        fontWeight: 'bold',
-        letterSpacing: '2px',
-        position: 'relative',
-        transition: 'all 0.2s',
-        color: aStyleColorBtn7,
-    }
-    const styleButton7ALarge = {
-        margin:'20px',
-        width: '300px',
-        height: '60px',
-        textDecoration: 'none',
-        textTransform: 'uppercase',
-        textAlign: 'center',
-        lineHeight: '60px',
-        fontWeight: 'bold',
-        letterSpacing: '2px',
-        position: 'relative',
-        transition: 'all 0.2s',
-        color: aStyleColorBtn7,
-    }
-
     const styleButton7ABefore = {
         position: 'absolute',
         top: aStyleBeforeTopBtn7,
@@ -67,7 +41,7 @@ const Button7 = ({ color1, color2, color3, color4, value, Link, Target, size }) 
         width: '100%',
         height: '100%',
         backgroundColor: color4,
-        zIndex: '-1',
+        zIndex: '99',
         mixBlendMode: 'multiply',
         transition: 'all 0.2s',
         transformOrigin: 'top',
@@ -80,7 +54,7 @@ const Button7 = ({ color1, color2, color3, color4, value, Link, Target, size }) 
         width: '100%',
         height: '100%',
         backgroundColor: color3,
-        zIndex: '-1',
+        zIndex: '99',
         mixBlendMode: 'multiply',
         transition: 'all 0.2s',
         transformOrigin: 'bottom',
@@ -111,47 +85,17 @@ const Button7 = ({ color1, color2, color3, color4, value, Link, Target, size }) 
             className="button7"
             style={styleButton7}
         >
-            {
-                size === "small" ? (
-                    <a
-                        href={Link}
-                        target={Target}
-                        style={styleButton7ASmall}
-                        onMouseEnter={MouseEnterBtn7}
-                        onMouseLeave={MouseLeaveBtn7}
-                    >
-                        <div style={styleButton7ABefore} />
-                        {value}
-                        <div style={styleButton7AAfter} />
-                    </a>
-                ) : (
-                    size === "medium" ? (
-                        <a
-                            href={Link}
-                            target={Target}
-                            style={styleButton7AMedium}
-                            onMouseEnter={MouseEnterBtn7}
-                            onMouseLeave={MouseLeaveBtn7}
-                        >
-                            <div style={styleButton7ABefore} />
-                            {value}
-                            <div style={styleButton7AAfter} />
-                        </a>
-                    ) : (
-                        <a
-                            href={Link}
-                            target={Target}
-                            style={styleButton7ALarge}
-                            onMouseEnter={MouseEnterBtn7}
-                            onMouseLeave={MouseLeaveBtn7}
-                        >
-                            <div style={styleButton7ABefore} />
-                            {value}
-                            <div style={styleButton7AAfter} />
-                        </a>
-                    )
-                )
-            }
+            <a
+                href={Link}
+                target={Target}
+                style={styleButton7A}
+                onMouseEnter={MouseEnterBtn7}
+                onMouseLeave={MouseLeaveBtn7}
+            >
+                <div style={styleButton7ABefore} />
+                {value}
+                <div style={styleButton7AAfter} />
+            </a>
         </div>
     )
 }

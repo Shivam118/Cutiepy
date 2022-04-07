@@ -14,47 +14,28 @@ const Button2 = ({ color1, color2, color3, value, Link, Target, size }) => {
 
   const styleButton2 = {
     display: 'flex',
-    flexWrap: 'wrap',
+    // position: 'relative',
+    margin: (size / 9) + 'px',
   }
-
-  const styleButton2ASmall = {
-    margin:'20px',
+  const styleButton2A = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: (size / 8) + 'px',
+    width: size + 'px',
+    height: (size / 3) + 'px',
     textTransform: 'uppercase',
     fontWeight: 'bold',
     textDecoration: 'none',
     letterSpacing: '5px',
     position: 'relative',
-    padding: '18px 30px',
     background: 'transparent',
     color: color1,
-    zIndex: '1',
-  }
-  const styleButton2AMedium = {
-    margin:'25px',
-    textTransform: 'uppercase',
-    fontWeight: 'bold',
-    textDecoration: 'none',
-    letterSpacing: '5px',
-    position: 'relative',
-    padding: '27px 45px',
-    background: 'transparent',
-    color: color1,
-    zIndex: '1',
-  }
-  const styleButton2ALarge = {
-    margin:'30px',
-    textTransform: 'uppercase',
-    fontWeight: 'bold',
-    textDecoration: 'none',
-    letterSpacing: '5px',
-    position: 'relative',
-    padding: '36px 60px',
-    background: 'transparent',
-    color: color1,
-    zIndex: '1',
+    zIndex: '99',
   }
 
   const styleButton2ABefore = {
+    display: 'flex',
     position: 'absolute',
     height: '100%',
     width: '50%',
@@ -62,11 +43,12 @@ const Button2 = ({ color1, color2, color3, value, Link, Target, size }) => {
     top: aBeforeTopBtn2,
     backgroundColor: color2,
     transform: aTransformBtn2,
-    zIndex: '-1',
+    zIndex: '95',
     transition: aTransitionBtn2,
   }
 
   const styleButton2AAfter = {
+    display: 'flex',
     position: 'absolute',
     height: '100%',
     width: '50%',
@@ -74,7 +56,7 @@ const Button2 = ({ color1, color2, color3, value, Link, Target, size }) => {
     top: aAfterTopBtn2,
     backgroundColor: color3,
     transform: aTransformBtn2,
-    zIndex: '-1',
+    zIndex: '95',
     transition: aTransitionBtn2,
   }
 
@@ -100,47 +82,17 @@ const Button2 = ({ color1, color2, color3, value, Link, Target, size }) => {
       className="button2"
       style={styleButton2}
     >
-      {
-        size === "small" ? (
-          <a
-            href={Link}
-            target={Target}
-            style={styleButton2ASmall}
-            onMouseEnter={MouseEnterBtn2}
-            onMouseLeave={MouseLeaveBtn2}
-          >
-            <div style={styleButton2ABefore} />
-            {value}
-            <div style={styleButton2AAfter} />
-          </a>
-        ) : (
-          size === "medium" ? (
-            <a
-              href={Link}
-              target={Target}
-              style={styleButton2AMedium}
-              onMouseEnter={MouseEnterBtn2}
-              onMouseLeave={MouseLeaveBtn2}
-            >
-              <div style={styleButton2ABefore} />
-              {value}
-              <div style={styleButton2AAfter} />
-            </a>
-          ) : (
-            <a
-              href={Link}
-              target={Target}
-              style={styleButton2ALarge}
-              onMouseEnter={MouseEnterBtn2}
-              onMouseLeave={MouseLeaveBtn2}
-            >
-              <div style={styleButton2ABefore} />
-              {value}
-              <div style={styleButton2AAfter} />
-            </a>
-          )
-        )
-      }
+      <a
+        href={Link}
+        target={Target}
+        style={styleButton2A}
+        onMouseEnter={MouseEnterBtn2}
+        onMouseLeave={MouseLeaveBtn2}
+      >
+        <div style={styleButton2ABefore} />
+        {value}
+        <div style={styleButton2AAfter} />
+      </a>
     </div>
   )
 }
