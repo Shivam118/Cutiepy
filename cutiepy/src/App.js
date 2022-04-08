@@ -22,7 +22,7 @@ function App() {
           <Button4 />
           <Button5 />
           <Button6 />
-          <Button7 color1="black" color2="white" color3="orange" color4="skyblue"/>
+          <Button7 />
           <Button8 />
       {/* </header> */}
     </div>

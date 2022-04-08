@@ -1,6 +1,7 @@
 {
   "name": "cutiepy",
   "version": "0.1.6",
+  "description": "Above 0.1.5 version, the Size of Buttons are depend on Users.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "private": false,

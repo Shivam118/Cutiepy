@@ -7,8 +7,10 @@ const Button5 = ({ color1, color2, value, Link, Target, size }) => {
 
 
     const styleButton5 = {
-        display: 'flex',
+        // display: 'flex',
+        position:'relative',
         margin: (size / 10) + 'px',
+        zIndex:'100',
     }
     const styleButton5A = {
         display: 'flex',
@@ -23,6 +25,7 @@ const Button5 = ({ color1, color2, value, Link, Target, size }) => {
         letterSpacing: '2px',
         textTransform: 'uppercase',
         position: 'relative',
+        zIndex:'1',
     }
 
     const MouseEnterBtn5 = () => {
@@ -50,8 +53,8 @@ const Button5 = ({ color1, color2, value, Link, Target, size }) => {
 }
 
 Button5.defaultProps = {
-    color1: defaultHelper.colorB,
-    color2: defaultHelper.colorW,
+    color1: defaultHelper.colorBlack,
+    color2: defaultHelper.colorWhite,
     size: defaultHelper.size,
     value: defaultHelper.value,
     Link: defaultHelper.Link,

@@ -9,8 +9,10 @@ const Button4 = ({ color1, color2, value, Link, Target, size }) => {
 
 
   const styleButton4 = {
-    display: 'flex',
+    // display: 'flex',
+    position:'relative',
     margin: (size / 10) + 'px',
+    zIndex:'100',
   }
   const styleButton4A = {
     display: 'flex',
@@ -28,6 +30,7 @@ const Button4 = ({ color1, color2, value, Link, Target, size }) => {
     transition: 'all 0.2s',
     transform: aTransformBtn4,
     boxShadow: aBoxShadowBtn4,
+    zIndex:'1',
   }
 
   const styleButton4ABefore = {
@@ -77,8 +80,8 @@ const Button4 = ({ color1, color2, value, Link, Target, size }) => {
 }
 
 Button4.defaultProps = {
-  color1: defaultHelper.colorB,
-  color2: defaultHelper.colorW,
+  color1: defaultHelper.colorBlack,
+  color2: defaultHelper.colorWhite,
   size: defaultHelper.size,
   value: defaultHelper.value,
   Link: defaultHelper.Link,

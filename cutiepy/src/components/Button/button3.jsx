@@ -7,8 +7,10 @@ const Button3 = ({ color1, color2, value, Link, Target, size }) => {
   const [aBeforeTransformBtn3, setABeforeTransformBtn3] = useState('translateX(-100%)');
 
   const styleButton3 = {
-    display: 'flex',
+    // display: 'flex',
+    position:'relative',
     margin: (size / 10) + 'px',
+    zIndex:'100',
   }
   const styleButton3A = {
     display: 'flex',
@@ -23,7 +25,7 @@ const Button3 = ({ color1, color2, value, Link, Target, size }) => {
     transition: 'all 1s',
     position: 'relative',
     overflow: 'hidden',
-    zIndex: '99',
+    zIndex: '1',
   }
   const styleButton3ABefore = {
     display: 'flex',
@@ -35,7 +37,7 @@ const Button3 = ({ color1, color2, value, Link, Target, size }) => {
     backgroundColor: color2,
     transform: aBeforeTransformBtn3,
     transition: 'all 1s',
-    zIndex: '98',
+    zIndex: '-1',
   }
 
   const MouseEnterBtn3 = () => {
@@ -66,8 +68,8 @@ const Button3 = ({ color1, color2, value, Link, Target, size }) => {
 }
 
 Button3.defaultProps = {
-  color1: defaultHelper.colorW,
-  color2: defaultHelper.colorB,
+  color1: defaultHelper.colorWhite,
+  color2: defaultHelper.colorBlack,
   size: defaultHelper.size,
   value: defaultHelper.value,
   Link: defaultHelper.Link,

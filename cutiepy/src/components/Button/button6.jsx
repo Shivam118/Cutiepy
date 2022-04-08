@@ -22,7 +22,8 @@ const Button6 = ({ color1, color2, value, Link, Target, size }) => {
 
 
     const styleButton6 = {
-        display: 'flex',
+        // display: 'flex',
+        position:'relative',
         margin: (size / 10) + 'px',
         zIndex: '100',
     }
@@ -41,7 +42,7 @@ const Button6 = ({ color1, color2, value, Link, Target, size }) => {
         transition: 'all 0.5s',
         position: 'relative',
         transitionDelay: aTransitionDelayBtn6,
-        zIndex: '100',
+        zIndex: '1',
     }
     const styleButton6ABefore = {
         position: 'absolute',
@@ -52,7 +53,7 @@ const Button6 = ({ color1, color2, value, Link, Target, size }) => {
         backgroundColor: color1,
         transform: aBeforeTransformBtn6,
         transition: 'all 0.3s',
-        zIndex: '99',
+        zIndex: '-1',
         opacity: aOpacityBtn6,
         left: aBeforeLeftBtn6,
         boxShadow: aBeforeBoxShadowBtn6,
@@ -66,7 +67,7 @@ const Button6 = ({ color1, color2, value, Link, Target, size }) => {
         backgroundColor: color1,
         transform: aAfterTransformBtn6,
         transition: 'all 0.3s',
-        zIndex: '99',
+        zIndex: '-1',
         opacity: aOpacityBtn6,
         right: aAfterRightBtn6,
         boxShadow: aAfterBoxShadowBtn6,
@@ -82,7 +83,7 @@ const Button6 = ({ color1, color2, value, Link, Target, size }) => {
         borderRadius: '8px',
         transform: aSpanTransformBtn6,
         transition: 'all 0.3s',
-        zIndex: '99',
+        zIndex: '-1',
         transitionDelay: aSpanTransitionDelayBtn6,
     }
 
@@ -142,8 +143,8 @@ const Button6 = ({ color1, color2, value, Link, Target, size }) => {
 }
 
 Button6.defaultProps = {
-    color1: defaultHelper.colorB,
-    color2: defaultHelper.colorW,
+    color1: defaultHelper.colorBlack,
+    color2: defaultHelper.colorWhite,
     size: defaultHelper.size,
     value: defaultHelper.value,
     Link: defaultHelper.Link,

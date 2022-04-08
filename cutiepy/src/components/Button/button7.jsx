@@ -5,17 +5,19 @@ import defaultHelper from '../defaultHelper';
 const Button7 = ({ color1, color2, color3, color4, value, Link, Target, size }) => {
 
     const [aStyleColorBtn7, setAStyleColorBtn7] = useState(color2);
-    const [aStyleBeforeTopBtn7, setAStyleBeforeTopBtn7] = useState('-3px');
+    const [aStyleBeforeTopBtn7, setAStyleBeforeTopBtn7] = useState(-1*(size/75) + 'px');
     const [aStyleBeforeTransformBtn7, setAStyleBeforeTransformBtn7] = useState('');
-    const [aStyleBeforeLeftBtn7, setAStyleBeforeLeftBtn7] = useState('-3px');
-    const [aStyleAfterLeftBtn7, setAStyleAfterLeftBtn7] = useState('3px');
-    const [aStyleAfterTopBtn7, setAStyleAfterTopBtn7] = useState('3px');
+    const [aStyleBeforeLeftBtn7, setAStyleBeforeLeftBtn7] = useState(-1*(size/75) + 'px');
+    const [aStyleAfterLeftBtn7, setAStyleAfterLeftBtn7] = useState((size/75) + 'px');
+    const [aStyleAfterTopBtn7, setAStyleAfterTopBtn7] = useState((size/75) + 'px');
     const [aStyleAfterTransformBtn7, setAStyleAfterTransformBtn7] = useState('');
 
 
     const styleButton7 = {
-        display: 'flex',
+        // display: 'flex',
+        position:'relative',
         margin: (size / 10) + 'px',
+        zIndex:'100',
     }
     const styleButton7A = {
         display: 'flex',
@@ -32,7 +34,7 @@ const Button7 = ({ color1, color2, color3, color4, value, Link, Target, size }) 
         position: 'relative',
         transition: 'all 0.2s',
         color: aStyleColorBtn7,
-        zIndex: '100',
+        zIndex: '1',
     }
     const styleButton7ABefore = {
         position: 'absolute',
@@ -41,7 +43,7 @@ const Button7 = ({ color1, color2, color3, color4, value, Link, Target, size }) 
         width: '100%',
         height: '100%',
         backgroundColor: color4,
-        zIndex: '99',
+        zIndex: '-1',
         mixBlendMode: 'multiply',
         transition: 'all 0.2s',
         transformOrigin: 'top',
@@ -54,7 +56,7 @@ const Button7 = ({ color1, color2, color3, color4, value, Link, Target, size }) 
         width: '100%',
         height: '100%',
         backgroundColor: color3,
-        zIndex: '99',
+        zIndex: '-1',
         mixBlendMode: 'multiply',
         transition: 'all 0.2s',
         transformOrigin: 'bottom',
@@ -63,8 +65,8 @@ const Button7 = ({ color1, color2, color3, color4, value, Link, Target, size }) 
 
     const MouseEnterBtn7 = () => {
         setAStyleColorBtn7(color1);
-        setAStyleBeforeTopBtn7('-6px');
-        setAStyleAfterTopBtn7('6px');
+        setAStyleBeforeTopBtn7(-1*(size/37.5) + 'px');
+        setAStyleAfterTopBtn7((size/37.5) + 'px');
         setAStyleBeforeLeftBtn7('0px');
         setAStyleAfterLeftBtn7('0px');
         setAStyleBeforeTransformBtn7('perspective(1000px) rotateX(75deg)');
@@ -72,10 +74,10 @@ const Button7 = ({ color1, color2, color3, color4, value, Link, Target, size }) 
     }
     const MouseLeaveBtn7 = () => {
         setAStyleColorBtn7(color2);
-        setAStyleBeforeTopBtn7('-3px');
-        setAStyleAfterTopBtn7('3px');
-        setAStyleBeforeLeftBtn7('-3px');
-        setAStyleAfterLeftBtn7('3px');
+        setAStyleBeforeTopBtn7(-1*(size/75) + 'px');
+        setAStyleAfterTopBtn7((size/75) + 'px');
+        setAStyleBeforeLeftBtn7(-1*(size/75) + 'px');
+        setAStyleAfterLeftBtn7((size/75) + 'px');
         setAStyleBeforeTransformBtn7('');
         setAStyleAfterTransformBtn7('');
     }
@@ -101,10 +103,10 @@ const Button7 = ({ color1, color2, color3, color4, value, Link, Target, size }) 
 }
 
 Button7.defaultProps = {
-    color1: defaultHelper.colorB,
-    color2: defaultHelper.colorW,
-    color3: defaultHelper.colorP,
-    color4: defaultHelper.colorCyan,
+    color1: defaultHelper.colorBlack,
+    color2: defaultHelper.colorWhite,
+    color3: defaultHelper.colorRed,
+    color4: defaultHelper.colorSkyblue,
     size: defaultHelper.size,
     value: defaultHelper.value,
     Link: defaultHelper.Link,

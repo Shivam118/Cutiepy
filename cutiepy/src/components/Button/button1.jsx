@@ -10,9 +10,10 @@ const Button1 = ({ color1, color2, value, size, Link, Target }) => {
   const [aBeforeOpacityBtn1, setABeforeOpacityBtn1] = useState('0');
 
   const styleButton1 = {
-    display: 'flex',
+    // display: 'flex',
     position: 'relative',
     margin: (size / 10) + 'px',
+    zIndex:'100',
   }
   const styleButton1A = {
     display: 'flex',
@@ -27,6 +28,7 @@ const Button1 = ({ color1, color2, value, size, Link, Target }) => {
     transition: aTransitionBtn1,
     position: 'relative',
     overflow: 'hidden',
+    zIndex:'1',
   }
   const styleButton1ABefore = {
     position: 'absolute',
@@ -42,7 +44,8 @@ const Button1 = ({ color1, color2, value, size, Link, Target }) => {
     transform: aBeforeTransformBtn1,
     opacity: aBeforeOpacityBtn1,
     transition: aBeforeTransitionBtn1,
-    overflow: 'hidden'
+    overflow: 'hidden',
+    zIndex:'-1',
   }
   const MouseEnterBtn1 = () => {
     setAColorBtn1("transparent");
@@ -76,8 +79,8 @@ const Button1 = ({ color1, color2, value, size, Link, Target }) => {
 }
 
 Button1.defaultProps = {
-  color1: defaultHelper.colorW,
-  color2: defaultHelper.colorB,
+  color1: defaultHelper.colorWhite,
+  color2: defaultHelper.colorBlack,
   size: defaultHelper.size,
   value: defaultHelper.value,
   Link: defaultHelper.Link,

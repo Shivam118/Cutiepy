@@ -13,9 +13,10 @@ const Button2 = ({ color1, color2, color3, value, Link, Target, size }) => {
 
 
   const styleButton2 = {
-    display: 'flex',
-    // position: 'relative',
+    // display: 'flex',
+    position: 'relative',
     margin: (size / 9) + 'px',
+    zIndex:'100',
   }
   const styleButton2A = {
     display: 'flex',
@@ -31,7 +32,7 @@ const Button2 = ({ color1, color2, color3, value, Link, Target, size }) => {
     position: 'relative',
     background: 'transparent',
     color: color1,
-    zIndex: '99',
+    zIndex: '1',
   }
 
   const styleButton2ABefore = {
@@ -43,7 +44,7 @@ const Button2 = ({ color1, color2, color3, value, Link, Target, size }) => {
     top: aBeforeTopBtn2,
     backgroundColor: color2,
     transform: aTransformBtn2,
-    zIndex: '95',
+    zIndex: '-1',
     transition: aTransitionBtn2,
   }
 
@@ -56,7 +57,7 @@ const Button2 = ({ color1, color2, color3, value, Link, Target, size }) => {
     top: aAfterTopBtn2,
     backgroundColor: color3,
     transform: aTransformBtn2,
-    zIndex: '95',
+    zIndex: '-1',
     transition: aTransitionBtn2,
   }
 
@@ -98,9 +99,9 @@ const Button2 = ({ color1, color2, color3, value, Link, Target, size }) => {
 }
 
 Button2.defaultProps = {
-  color1: defaultHelper.colorW,
-  color2: defaultHelper.colorB,
-  color3: defaultHelper.colorR,
+  color1: defaultHelper.colorWhite,
+  color2: defaultHelper.colorBlack,
+  color3: defaultHelper.colorRed,
   size: defaultHelper.size,
   value: defaultHelper.value,
   Link: defaultHelper.Link,
