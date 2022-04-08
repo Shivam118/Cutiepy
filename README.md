@@ -74,4 +74,4 @@ Then, import it in your ```.js  or .jsx``` file.
 <Button7 Link="https://localhost:8000/Contacts/Web.html" />
 ```
 <hr>
-You can refer to [Github Page](https://github.com/cutiepy) for more Information.
+You can refer to [Github Page](https://github.com/Shivam118/Cutiepy.git) for more Information.
